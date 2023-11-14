@@ -81,3 +81,15 @@ for (let i = 0; i < 20; i++) {
    bucket.pripildyti(new Vaisius());
 }
 console.log(bucket.vaisiai.slice());
+
+const grauztukai = [];
+
+const prakastasVaisius = () => {
+   bucket.vaisiai.map((item) => {
+      item.prakastas = true;
+   });
+   return grauztukai.push(...bucket.vaisiai);
+};
+
+prakastasVaisius();
+console.log(grauztukai);
